@@ -1,0 +1,33 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": ["plugin:@stencil/recommended", "eslint:recommended"],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "@stencil/required-jsdoc": "off",
+    "@stencil/prefer-vdom-listener": "off",
+
+    // Added rules from eslint
+    "no-console": "error",
+    "curly": ["error", "multi-line"],
+    "max-classes-per-file": ["error", 1],
+    "no-multiple-empty-lines": "error",
+    "no-trailing-spaces": "error",
+    "no-multi-spaces": "error",
+    "semi": ["error", "always"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "object-curly-spacing": ["error", "always"],
+    "no-duplicate-imports": "error",
+    "no-shadow": "error",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "max-len": ["error", { "code": 180, "ignoreStrings": true, "ignoreUrls": true }],
+
+    // Modfied rules from eslint:recommended
+    "no-undef": "off",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "h||Host" }]
+  }
+}
