@@ -1,0 +1,18 @@
+import { newSpecPage } from '@stencil/core/testing';
+import { {{ properCase name }} } from './lids-{{name}}';
+
+describe('lids-{{name}}', () => {
+  it('should render a lids-{{name}}', async () => {
+    const page = await newSpecPage({
+      components: [{{ properCase name }}],
+      html: `<lids-{{name}}></lids-{{name}}>`,
+    });
+    expect(page.root).toEqualHtml(`
+      <lids-{{name}}>
+        <mock:shadow-root>
+          <slot></slot>
+        </mock:shadow-root>
+      </lids-{{name}}>
+    `);
+  });
+});
