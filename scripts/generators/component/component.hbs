@@ -1,0 +1,16 @@
+import { Component, Host, h } from '@stencil/core';
+
+@Component({
+  tag: 'lids-{{ name }}',
+  styleUrl: 'lids-{{ name }}.{{style}}',
+  shadow: true
+})
+export class {{ properCase name }} {
+  render() {
+    return (
+      <Host>
+        <slot></slot>
+      </Host>
+    );
+  }
+}

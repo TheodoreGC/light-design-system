@@ -1,0 +1,11 @@
+import { newE2EPage } from '@stencil/core/testing';
+
+describe('lids-{{name}}', () => {
+  it('should render a lids-{{name}}', async () => {
+    const page = await newE2EPage();
+    await page.setContent('<lids-{{name}}></lids-{{name}}>');
+
+    const element = await page.find('lids-{{name}}');
+    expect(element).toHaveClass('hydrated');
+  });
+});
