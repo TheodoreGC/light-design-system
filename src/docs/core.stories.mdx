@@ -1,0 +1,176 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Design Tokens" parameters={{ previewTabs: { canvas: { hidden: true } } }}/>
+
+# Design Tokens
+
+Design tokens are design decisions, represented as data, that ensure systematically unified and cohesive product experiences.
+
+## What are design tokens?
+
+Design tokens represent the whole set of values involve in building and maintaining a design system such as:
+
+- Spacing,
+- Colour,
+- Typography,
+- Object styles,
+- Animation
+
+And many more.
+
+They are used in place of hard-coded values in order to ensure flexibility and unity across all product experiences.
+
+Design tokens are integrated to our components and cover colour themes, component states, etc.
+
+## Design Token Types
+
+The following types of design tokens serve as the building blocks which make up the Light Design Language.
+
+### Global Tokens (Core)
+
+Global tokens are the primitive values of the design language and are represented by context-agnostic names. The colour palette, animations, typography and spacing value are all global tokens.
+
+They can be used directly or by transitivity through context composition via the other token types.
+
+### Component-specific Tokens
+
+Component-specific tokens are an exhaustive representation of every value associated with a component. They can inherit from global tokens.
+
+The main difference with global tokens is that component-specific tokens are named in a way that allows engineering teams to be as specific as possible in applying tokens in component development.
+
+## Tokens
+
+### Border Radius
+
+| Name                   | Description                    | Default   |
+|------------------------|--------------------------------|-----------|
+| `--lids-radius-sharp`   | Set no border radius         | `0`       |
+| `--lids-radius-pill`    | Set border radius to pill    | `20rem`   |
+| `--lids-radius-default` | Set border radius to default | `0.25rem` |
+| `--lids-radius-circle`  | Set border radius to circle  | `50%`     |
+
+### Box Shadows
+
+| Name                   | Description          | Default                                                                                                                                                           |
+|------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--lids-shadow-tooltip` | Set tooltip shadow | `0 2px 10px 0 gba(0, 41, 77, 0.07)`                                                                                                                               |
+| `--lids-shadow-hover`   | Set hover shadow   | `0 2px 10px 0 rgba(0, 41, 77, 0.1)`                                                                                                                               |
+| `--lids-shadow-modal`   | Set modal shadow   | `0 2px 20px 0 rgba(0, 0, 0, 0.2)`                                                                                                                                 |
+| `--lids-shadow-default` | Set default shadow | `0 2px 6px 0 rgba(0, 41, 77, 0.07)`                                                                                                                               |
+| `--lids-shadow-card`    | Set card shadow    | `0 2px 6px 0 rgba(0, 41, 77, 0.07), 0 -1px 0 0 rgba(0, 0, 0, 0.09), -1px 0 0 0 rgba(0, 0, 0, 0.07), 1px 0 0 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.07)` |
+
+### Colors
+
+| Name                            | Default                                                        |
+|-------------------------------- |----------------------------------------------------------------|
+| `--lids-color-blue-darkest`     | <div class="color-placeholder lids-color-blue-darkest"></div>  |
+| `--lids-color-blue-darker`      | <div class="color-placeholder lids-color-blue-darker"></div>   |
+| `--lids-color-blue-dark`        | <div class="color-placeholder lids-color-blue-dark"></div>     |
+| `--lids-color-blue`             | <div class="color-placeholder lids-color-blue"></div>          |
+| `--lids-color-blue-light`       | <div class="color-placeholder lids-color-blue-light"></div>    |
+| `--lids-color-blue-lighter`     | <div class="color-placeholder lids-color-blue-lighter"></div>  |
+| `--lids-color-blue-lightest`    | <div class="color-placeholder lids-color-blue-lightest"></div> |
+| `--lids-color-gray-darkest`     | <div class="color-placeholder lids-color-gray-darkest"></div>  |
+| `--lids-color-gray-darker`      | <div class="color-placeholder lids-color-gray-darker"></div>   |
+| `--lids-color-gray-dark`        | <div class="color-placeholder lids-color-gray-dark"></div>     |
+| `--lids-color-gray`             | <div class="color-placeholder lids-color-gray"></div>          |
+| `--lids-color-gray-light`       | <div class="color-placeholder lids-color-gray-light"></div>    |
+| `--lids-color-gray-lighter`     | <div class="color-placeholder lids-color-gray-lighter"></div>  |
+| `--lids-color-white`            | <div class="color-placeholder lids-color-white"></div>         |
+| `--lids-color-black`            | <div class="color-placeholder lids-color-black"></div>         |
+
+### Fonts
+
+| Name                            | Description                     | Default         |
+|-------------------------------- |---------------------------------|-----------------|
+| `--lids-letter-spacing-heading`  | Set header spacing              | -0.01rem        |
+| `--lids-font-weight-extra-light` | Set font-weight to extra light  | 200             |
+| `--lids-font-weight-light`       | Set font-weight to light        | 300             |
+| `--lids-font-weight-regular`     | Set font-weight to regular      | 400             |
+| `--lids-font-weight-medium`      | Set font-weight to medium       | 500             |
+| `--lids-font-weight-semi-bold`   | Set font-weight to semi-bold    | 600             |
+| `--lids-font-weight-extra-bold`  | Set font-weight to extra-bold   | 800             |
+| `--lids-font-size-x-small`       | Set font size to x-small        |    `0.75rem`    |
+| `--lids-font-size-small`         | Set font size to small          |    `0.875rem`   |
+| `--lids-font-size-medium`        | Set font size to medium         |    `1rem`       |
+| `--lids-font-size-large`         | Set font size to large          |    `1.25rem`    |
+| `--lids-font-size-x-large`       | Set font size to x-large        |    `1.5rem`     |
+| `--lids-font-size-xx-large`      | Set font size to xx-large       |    `2.25rem`    |
+| `--lids-font-size-xxx-large`     | Set font size to xxx-large      |    `3rem`       |
+| `--lids-font-size-xxxx-large`    | Set font size to xxxx-large     |    `4.5rem`     |
+
+### Line Heights
+
+| Name                       | Description                  | Default |
+|----------------------------|------------------------------|---------|
+| `--lids-line-height-x-smal` | Set line height to x-small | 1.1     |
+| `--lids-line-height-small`  | Set line height to small   | 1.25    |
+| `--lids-line-height-medium` | Set line height to medium  | 1.5     |
+
+### Opacities
+
+| Name               | Description           | Default |
+|--------------------|-----------------------|---------|
+| `--lids-opacity-30` | Set opacity to 0.3  | `0.3`   |
+| `--lids-opacity-50` | Set opacity to 0.5  | `0.5`   |
+| `--lids-opacity-75` | Set opacity to 0.75 | `0.75`  |
+| `--lids-opacity-85` | Set opacity to 0.85 | `0.85`  |
+
+### Sizes
+
+| Name                        | Description                  | Default |
+|-----------------------------|------------------------------|---------|
+| `--lids-size-icon-xxx-small` | Set icon size to xxx-small | `7px`   |
+| `--lids-size-icon-xx-small`  | Set icon size to xx-small  | `10px`  |
+| `--lids-size-icon-x-small`   | Set icon size to x-small   | `16px`  |
+| `--lids-size-icon-small`     | Set icon size to small     | `20px`  |
+| `--lids-size-icon-medium`    | Set icon size to medium    | `24px`  |
+| `--lids-size-icon-large`     | Set icon size to large     | `30px`  |
+| `--lids-size-icon-x-large`   | Set icon size to x-large   | `36px`  |
+| `--lids-size-icon-xx-large`  | Set icon size to xx-large  | `48px`  |
+| `--lids-size-icon-xxx-large` | Set icon size to xxx-large | `72px`  |
+| `--lids-size-form-border`    | Set form border size       | `1px`   |
+| `--lids-size-button-border`  | Set button border size     | `2px`   |
+
+### Spacing
+
+| Name                     | Description           | Default     |
+|--------------------------|-----------------------|-------------|
+| `--lids-space-xxx-small`  | Set spacing to 2px  | `0.125rem`  |
+| `--lids-space-xx-small`   | Set spacing to 4px  | `0.25rem`   |
+| `--lids-space-x-small`    | Set spacing to 8px  | `0.5rem`    |
+| `--lids-space-small`      | Set spacing to 12px | `0.75rem`   |
+| `--lids-space-medium`     | Set spacing to 16px | `1rem`      |
+| `--lids-space-large`      | Set spacing to 20px | `1.25rem`   |
+| `--lids-space-x-large`    | Set spacing to 28px | `1.75rem`   |
+| `--lids-space-xx-large`   | Set spacing to 36px | `2.25rem`   |
+| `--lids-space-xxx-large`  | Set spacing to 48px | `3rem`      |
+| `--lids-space-xxxx-large` | Set spacing to 72px | `4.5rem`    |
+
+### Transitions
+
+| Name                                  | Description                            | Default      |
+|---------------------------------------|----------------------------------------|--------------|
+| `--lids-transition-very-quickly`       | Set transition to very quickly       | `100ms ease` |
+| `--lids-transition-quickly`            | Set transition to quickly            | `200ms ease` |
+| `--lids-transition-moderately-quickly` | Set transition to moderately quickly | `300ms ease` |
+| `--lids-transition-moderately-slowly`  | Set transition to moderately slowly  | `400ms ease` |
+| `--lids-transition-slowly`             | Set transition to slowly             | `500ms ease` |
+| `--lids-transition-very-slowly`        | Set transition to very slowly        | `600ms ease` |
+
+### Z-Index
+
+| Name                     | Description                | Default   |
+|--------------------------|----------------------------|-----------|
+| `--lids-z-index-deep`     | Set z-index to deep      | `-999999` |
+| `--lids-z-index-default`  | Set z-index to default   | `1`       |
+| ` --lids-z-index-masked`  | Set z-index to masked    | `100`     |
+| `--lids-z-index-mask`     | Set z-index to mask      | `200`     |
+| `--lids-z-index-sticky`   | Set z-index to sticky    | `300`     |
+| `--lids-z-index-header`   | Set z-index for header   | `400`     |
+| `--lids-z-index-toast`    | Set z-index for toast    | `500`     |
+| `--lids-z-index-dropdown` | Set z-index for dropdown | `600`     |
+| `--lids-z-index-overlay`  | Set z-index for overlay  | `700`     |
+| `--lids-z-index-spinner`  | Set z-index for spinner  | `800`     |
+| `--lids-z-index-modal`    | Set z-index for modal    | `900`     |
+| `--lids-z-index-popup`    | Set z-index for popup    | `950`     |

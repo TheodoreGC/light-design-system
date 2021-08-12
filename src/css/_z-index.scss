@@ -1,0 +1,14 @@
+:root {
+  --lids-z-index-deep: -999999;
+  --lids-z-index-default: 1;
+  --lids-z-index-masked: 100;
+  --lids-z-index-mask: 200;
+  --lids-z-index-sticky: 300;
+  --lids-z-index-header: 400;
+  --lids-z-index-toast: 500;
+  --lids-z-index-dropdown: 600;
+  --lids-z-index-overlay: 700;
+  --lids-z-index-spinner: 800;
+  --lids-z-index-modal: 900;
+  --lids-z-index-popup: 950;
+}
