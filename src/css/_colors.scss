@@ -1,0 +1,35 @@
+@import './utils/colors.scss';
+
+$lids-color-blue-darkest: #111517;
+$lids-color-blue-darker: #202c37;
+$lids-color-blue-dark: #2b3945;
+$lids-color-blue: tint($lids-color-blue-dark, 20%);
+$lids-color-blue-light: tint($lids-color-blue, 20%);
+$lids-color-blue-lighter: tint($lids-color-blue-light, 20%);
+$lids-color-blue-lightest: tint($lids-color-blue-lighter, 20%);
+
+$lids-color-gray-dark: #858585;
+$lids-color-gray-lightest: #fafafa;
+$lids-color-gray-darker: shade($lids-color-gray-dark, 20%);
+$lids-color-gray-darkest: shade($lids-color-gray-darker, 20%);
+$lids-color-gray: tint($lids-color-gray-dark, 20%);
+$lids-color-gray-light: tint($lids-color-gray, 20%);
+$lids-color-gray-lighter: shade($lids-color-gray-lightest, 20%);
+
+:root {
+  --lids-color-blue-darkest: #{$lids-color-blue-darkest};
+  --lids-color-blue-darker: #{$lids-color-blue-darker};
+  --lids-color-blue-dark: #{$lids-color-blue-dark};
+  --lids-color-blue: #{$lids-color-blue};
+  --lids-color-blue-light: #{$lids-color-blue-light};
+  --lids-color-blue-lighter: #{$lids-color-blue-lighter};
+  --lids-color-blue-lightest: #{$lids-color-blue-lightest};
+  --lids-color-gray-darkest: #{$lids-color-gray-darkest};
+  --lids-color-gray-darker: #{$lids-color-gray-darker};
+  --lids-color-gray-dark: #{$lids-color-gray-dark};
+  --lids-color-gray: #{$lids-color-gray};
+  --lids-color-gray-light: #{$lids-color-gray-light};
+  --lids-color-gray-lighter: #{$lids-color-gray-lighter};
+  --lids-color-white: #fff;
+  --lids-color-black: #000;
+}

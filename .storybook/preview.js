@@ -21,7 +21,7 @@ export const parameters = {
   previewTabs: { 'storybook/docs/panel': { index: -1 } },
   options: {
     storySort: {
-      order: ['Getting Started', 'Core', 'Components']
+      order: ['Getting Started', 'Contributing', 'Core', 'Components']
     }
   }
 }
