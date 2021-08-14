@@ -1,0 +1,247 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after {
+  content: "";
+  content: none;
+}
+
+q::before, q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --lids-radius-sharp: 0;
+  --lids-radius-pill: 20rem;
+  --lids-radius-default: 0.25rem;
+  --lids-radius-circle: 50%;
+}
+
+:root {
+  --lids-shadow-tooltip: 0 2px 10px 0 gba(0, 41, 77, 0.07);
+  --lids-shadow-hover: 0 2px 10px 0 rgba(0, 41, 77, 0.1);
+  --lids-shadow-modal: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  --lids-shadow-default: 0 2px 6px 0 rgba(0, 41, 77, 0.07);
+  --lids-shadow-card: 0 2px 6px 0 rgba(0, 41, 77, 0.07), 0 -1px 0 0 rgba(0, 0, 0, 0.09), -1px 0 0 0 rgba(0, 0, 0, 0.07), 1px 0 0 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.07);
+}
+
+:root {
+  --lids-color-blue-darkest: #111517;
+  --lids-color-blue-darker: #202c37;
+  --lids-color-blue-dark: #2b3945;
+  --lids-color-blue: #55616a;
+  --lids-color-blue-light: #778188;
+  --lids-color-blue-lighter: #929aa0;
+  --lids-color-blue-lightest: #a8aeb3;
+  --lids-color-gray-darkest: #555555;
+  --lids-color-gray-darker: #6a6a6a;
+  --lids-color-gray-dark: #858585;
+  --lids-color-gray: #9d9d9d;
+  --lids-color-gray-light: #b1b1b1;
+  --lids-color-gray-lighter: #c8c8c8;
+  --lids-color-white: #fff;
+  --lids-color-black: #000;
+}
+
+:root {
+  --lids-letter-spacing-heading: -0.01rem;
+  --lids-font-weight-extra-light: 200;
+  --lids-font-weight-light: 300;
+  --lids-font-weight-regular: 400;
+  --lids-font-weight-medium: 500;
+  --lids-font-weight-semi-bold: 600;
+  --lids-font-weight-extra-bold: 800;
+  --lids-font-size-x-small: 0.75rem;
+  --lids-font-size-small: 0.875rem;
+  --lids-font-size-medium: 1rem;
+  --lids-font-size-large: 1.25rem;
+  --lids-font-size-x-large: 1.5rem;
+  --lids-font-size-xx-large: 2.25rem;
+  --lids-font-size-xxx-large: 3rem;
+  --lids-font-size-xxxx-large: 4.5rem;
+}
+
+:root {
+  --lids-line-height-x-small: 1.1;
+  --lids-line-height-small: 1.25;
+  --lids-line-height-medium: 1.5;
+}
+
+:root {
+  --lids-opacity-30: 0.3;
+  --lids-opacity-50: 0.5;
+  --lids-opacity-75: 0.75;
+  --lids-opacity-85: 0.85;
+}
+
+:root {
+  --lids-size-icon-xxx-small: 7px;
+  --lids-size-icon-xx-small: 10px;
+  --lids-size-icon-x-small: 16px;
+  --lids-size-icon-small: 20px;
+  --lids-size-icon-medium: 24px;
+  --lids-size-icon-large: 30px;
+  --lids-size-icon-x-large: 36px;
+  --lids-size-icon-xx-large: 48px;
+  --lids-size-icon-xxx-large: 72px;
+  --lids-size-icon-stroke-width: 0.5px;
+  --lids-size-form-border: 1px;
+  --lids-size-button-border: 2px;
+}
+
+:root {
+  --lids-space-xxx-small: 0.125rem;
+  --lids-space-xx-small: 0.25rem;
+  --lids-space-x-small: 0.5rem;
+  --lids-space-small: 0.75rem;
+  --lids-space-medium: 1rem;
+  --lids-space-large: 1.25rem;
+  --lids-space-x-large: 1.75rem;
+  --lids-space-xx-large: 2.25rem;
+  --lids-space-xxx-large: 3rem;
+  --lids-space-xxxx-large: 4.5rem;
+}
+
+:root {
+  --lids-transition-very-quickly: 100ms ease;
+  --lids-transition-quickly: 200ms ease;
+  --lids-transition-moderately-quickly: 300ms ease;
+  --lids-transition-moderately-slowly: 400ms ease;
+  --lids-transition-slowly: 500ms ease;
+  --lids-transition-very-slowly: 600ms ease;
+}
+
+:root {
+  --lids-z-index-deep: -999999;
+  --lids-z-index-default: 1;
+  --lids-z-index-masked: 100;
+  --lids-z-index-mask: 200;
+  --lids-z-index-sticky: 300;
+  --lids-z-index-header: 400;
+  --lids-z-index-toast: 500;
+  --lids-z-index-dropdown: 600;
+  --lids-z-index-overlay: 700;
+  --lids-z-index-spinner: 800;
+  --lids-z-index-modal: 900;
+  --lids-z-index-popup: 950;
+}

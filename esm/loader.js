@@ -1,4 +1,4 @@
-import { B as BUILD, C as CSS, p as plt, w as win, a as promiseResolve, b as bootstrapLazy } from './index-bbc50104.js';
+import { B as BUILD, C as CSS, p as plt, w as win, a as promiseResolve, b as bootstrapLazy } from './index-943f092a.js';
 import { g as globalScripts } from './app-globals-0f993ce5.js';
 
 /*
@@ -26,7 +26,7 @@ const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return Promise.resolve();
   return patchEsm().then(() => {
   globalScripts();
-  return bootstrapLazy([["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1]}]]]], options);
+  return bootstrapLazy([["lids-icon",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]]], options);
   });
 };
 

@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const index = require('./index-ee7dbddc.js');
+const index = require('./index-cc775ef3.js');
 const appGlobals = require('./app-globals-3a1e7e63.js');
 
 /*
@@ -30,7 +30,7 @@ const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return Promise.resolve();
   return patchEsm().then(() => {
   appGlobals.globalScripts();
-  return index.bootstrapLazy([["my-component.cjs",[[1,"my-component",{"first":[1],"middle":[1],"last":[1]}]]]], options);
+  return index.bootstrapLazy([["lids-icon.cjs",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]]], options);
   });
 };
 
