@@ -25,3 +25,5 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 .env
 .jest-test-results.json
+
+src/components/lids-icon/build

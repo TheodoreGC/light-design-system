@@ -6,56 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface LidsIcon {
+        "height": string;
+        "name": string;
+        "width": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLLidsIconElement extends Components.LidsIcon, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLLidsIconElement: {
+        prototype: HTMLLidsIconElement;
+        new (): HTMLLidsIconElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "lids-icon": HTMLLidsIconElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface LidsIcon {
+        "height"?: string;
+        "name"?: string;
+        "width"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "lids-icon": LidsIcon;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
         }
     }
 }

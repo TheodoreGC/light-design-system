@@ -25,5 +25,8 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Icons Build
+        run: npm run build.icons
+
       - name: Test
         run: npm run test
