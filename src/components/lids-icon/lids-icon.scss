@@ -1,0 +1,23 @@
+:root {
+  /**
+   * @prop --lids-icon-svg-stroke-width: stroke width.
+   */
+  --lids-icon-stroke-width: var(--lids-size-icon-stroke-width, 0.5px);
+}
+
+$lids-icon-line-height: var(--lids-line-height-medium, 1.5);
+$lids-icon-stroke-width: var(--lids-icon-stroke-width, 0.5px);
+
+:host {
+  display: inline-block;
+  line-height: $lids-icon-line-height;
+
+  svg {
+    stroke-width: $lids-icon-stroke-width;
+  }
+
+  path {
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
