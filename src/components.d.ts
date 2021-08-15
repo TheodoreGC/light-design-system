@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LidsCard {
+    }
     interface LidsIcon {
         "height": string;
         "name": string;
@@ -13,6 +15,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLLidsCardElement extends Components.LidsCard, HTMLStencilElement {
+    }
+    var HTMLLidsCardElement: {
+        prototype: HTMLLidsCardElement;
+        new (): HTMLLidsCardElement;
+    };
     interface HTMLLidsIconElement extends Components.LidsIcon, HTMLStencilElement {
     }
     var HTMLLidsIconElement: {
@@ -20,16 +28,20 @@ declare global {
         new (): HTMLLidsIconElement;
     };
     interface HTMLElementTagNameMap {
+        "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
     }
 }
 declare namespace LocalJSX {
+    interface LidsCard {
+    }
     interface LidsIcon {
         "height"?: string;
         "name"?: string;
         "width"?: string;
     }
     interface IntrinsicElements {
+        "lids-card": LidsCard;
         "lids-icon": LidsIcon;
     }
 }
@@ -37,6 +49,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "lids-card": LocalJSX.LidsCard & JSXBase.HTMLAttributes<HTMLLidsCardElement>;
             "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
         }
     }

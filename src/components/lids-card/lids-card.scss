@@ -1,0 +1,17 @@
+$lids-card-shadow: 1px 1px var(--lids-space-xx-small) var(--lids-color-gray-lighter);
+$lids-card-border-radius: var(--lids-radius-default);
+$lids-card-padding: var(--lids-space-x-small);
+$lids-card-margin: 0 var(--lids-space-medium);
+
+:host {
+  display: block;
+  box-shadow: $lids-card-shadow;
+  border-radius: $lids-card-border-radius;
+
+  .lids-card-content-header,
+  .lids-card-content-body,
+  .lids-card-content-footer {
+    padding: $lids-card-padding;
+    margin: $lids-card-margin;
+  }
+}
