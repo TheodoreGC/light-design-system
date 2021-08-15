@@ -1,0 +1,33 @@
+$lids-masthead-shadow: 0 8px 6px -8px var(--lids-color-gray-lighter);
+$lids-masthead-padding: 0 var(--lids-space-xxxx-large);
+$lids-masthead-height: 56px;
+
+:host {
+  display: block;
+  box-shadow: $lids-masthead-shadow;
+  padding: $lids-masthead-padding;
+
+  .lids-masthead-container {
+    height: $lids-masthead-height;
+    display: flex;
+    align-items: center;
+  }
+
+  .lids-masthead-title {
+    display: flex;
+    flex: 0 1 auto;
+  }
+
+  .lids-masthead-action {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 0 auto;
+
+    [name="action"]::slotted(*) {
+      display: flex;
+      padding: 0;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
