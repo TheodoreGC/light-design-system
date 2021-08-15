@@ -13,6 +13,8 @@ export namespace Components {
         "name": string;
         "width": string;
     }
+    interface LidsMasthead {
+    }
 }
 declare global {
     interface HTMLLidsCardElement extends Components.LidsCard, HTMLStencilElement {
@@ -27,9 +29,16 @@ declare global {
         prototype: HTMLLidsIconElement;
         new (): HTMLLidsIconElement;
     };
+    interface HTMLLidsMastheadElement extends Components.LidsMasthead, HTMLStencilElement {
+    }
+    var HTMLLidsMastheadElement: {
+        prototype: HTMLLidsMastheadElement;
+        new (): HTMLLidsMastheadElement;
+    };
     interface HTMLElementTagNameMap {
         "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
+        "lids-masthead": HTMLLidsMastheadElement;
     }
 }
 declare namespace LocalJSX {
@@ -40,9 +49,12 @@ declare namespace LocalJSX {
         "name"?: string;
         "width"?: string;
     }
+    interface LidsMasthead {
+    }
     interface IntrinsicElements {
         "lids-card": LidsCard;
         "lids-icon": LidsIcon;
+        "lids-masthead": LidsMasthead;
     }
 }
 export { LocalJSX as JSX };
@@ -51,6 +63,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "lids-card": LocalJSX.LidsCard & JSXBase.HTMLAttributes<HTMLLidsCardElement>;
             "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
+            "lids-masthead": LocalJSX.LidsMasthead & JSXBase.HTMLAttributes<HTMLLidsMastheadElement>;
         }
     }
 }
