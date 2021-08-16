@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  box-shadow: 0 8px 6px -8px var(--lids-color-gray-lighter);
+  padding: 0 var(--lids-space-xxxx-large);
+}
+:host .lids-masthead-container {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+:host .lids-masthead-title {
+  display: flex;
+  flex: 0 1 auto;
+}
+:host .lids-masthead-action {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 0 auto;
+}
+:host .lids-masthead-action [name=action]::slotted(*) {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+}

@@ -2,10 +2,40 @@
 
 import type { Components, JSX } from "../types/components";
 
+interface LidsCard extends Components.LidsCard, HTMLElement {}
+export const LidsCard: {
+  prototype: LidsCard;
+  new (): LidsCard;
+};
+
 interface LidsIcon extends Components.LidsIcon, HTMLElement {}
 export const LidsIcon: {
   prototype: LidsIcon;
   new (): LidsIcon;
+};
+
+interface LidsMasthead extends Components.LidsMasthead, HTMLElement {}
+export const LidsMasthead: {
+  prototype: LidsMasthead;
+  new (): LidsMasthead;
+};
+
+interface LidsOption extends Components.LidsOption, HTMLElement {}
+export const LidsOption: {
+  prototype: LidsOption;
+  new (): LidsOption;
+};
+
+interface LidsSearchbar extends Components.LidsSearchbar, HTMLElement {}
+export const LidsSearchbar: {
+  prototype: LidsSearchbar;
+  new (): LidsSearchbar;
+};
+
+interface LidsSelect extends Components.LidsSelect, HTMLElement {}
+export const LidsSelect: {
+  prototype: LidsSelect;
+  new (): LidsSelect;
 };
 
 /**

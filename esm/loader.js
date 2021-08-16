@@ -1,4 +1,4 @@
-import { B as BUILD, C as CSS, p as plt, w as win, a as promiseResolve, b as bootstrapLazy } from './index-943f092a.js';
+import { B as BUILD, C as CSS, p as plt, w as win, a as promiseResolve, b as bootstrapLazy } from './index-164d94e1.js';
 import { g as globalScripts } from './app-globals-0f993ce5.js';
 
 /*
@@ -26,7 +26,7 @@ const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return Promise.resolve();
   return patchEsm().then(() => {
   globalScripts();
-  return bootstrapLazy([["lids-icon",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]]], options);
+  return bootstrapLazy([["lids-card",[[1,"lids-card"]]],["lids-icon",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]],["lids-masthead",[[1,"lids-masthead"]]],["lids-option",[[1,"lids-option",{"value":[1],"selected":[4]}]]],["lids-searchbar",[[1,"lids-searchbar",{"placeholder":[1],"value":[32]}]]],["lids-select",[[1,"lids-select",{"value":[1025]}]]]], options);
   });
 };
 

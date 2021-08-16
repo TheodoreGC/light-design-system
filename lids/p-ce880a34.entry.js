@@ -1,0 +1,1 @@
+import{r as s,h as t,H as o}from"./p-aba0bbf6.js";const r=class{constructor(t){s(this,t),this.value="",this.selected=!1}render(){return t(o,null,t("slot",null))}};r.style=":host{display:block}";export{r as lids_option}

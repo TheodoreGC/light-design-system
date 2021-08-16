@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  position: relative;
+}
+:host::after {
+  position: absolute;
+  margin-top: -4px;
+  top: 50%;
+  right: 8px;
+  content: "";
+  width: 0.8rem;
+  height: 0.5rem;
+  background-color: var(--lids-color-gray-darkest);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+:host .lids-select {
+  width: 100%;
+  margin: 0;
+  padding: var(--lids-space-medium);
+  border-radius: var(--lids-radius-default);
+  box-shadow: 0 0 4px 0 var(--lids-color-gray-lighter);
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+:host .lids-select::-ms-expand {
+  display: none;
+}

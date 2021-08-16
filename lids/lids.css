@@ -159,6 +159,10 @@ table {
   --lids-color-gray: #9d9d9d;
   --lids-color-gray-light: #b1b1b1;
   --lids-color-gray-lighter: #c8c8c8;
+  --lids-color-purple: #a020f0;
+  --lids-color-purple-dark: #801ac0;
+  --lids-color-purple-darker: #66159a;
+  --lids-color-purple-darkest: #52117b;
   --lids-color-white: #fff;
   --lids-color-black: #000;
 }

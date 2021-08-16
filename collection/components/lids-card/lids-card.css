@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  box-shadow: 1px 1px var(--lids-space-xx-small) var(--lids-color-gray-lighter);
+  border-radius: var(--lids-radius-default);
+}
+:host .lids-card-content-header,
+:host .lids-card-content-body,
+:host .lids-card-content-footer {
+  padding: var(--lids-space-x-small);
+  margin: 0 var(--lids-space-medium);
+}

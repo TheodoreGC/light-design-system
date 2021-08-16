@@ -1,6 +1,11 @@
 {
   "entries": [
-    "./components/lids-icon/lids-icon.js"
+    "./components/lids-card/lids-card.js",
+    "./components/lids-icon/lids-icon.js",
+    "./components/lids-masthead/lids-masthead.js",
+    "./components/lids-option/lids-option.js",
+    "./components/lids-searchbar/lids-searchbar.js",
+    "./components/lids-select/lids-select.js"
   ],
   "compiler": {
     "name": "@stencil/core",

@@ -1,6 +1,6 @@
 'use strict';
 
-const index = require('./index-cc775ef3.js');
+const index = require('./index-723b60be.js');
 const appGlobals = require('./app-globals-3a1e7e63.js');
 
 /*
@@ -120,5 +120,5 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   appGlobals.globalScripts();
-  return index.bootstrapLazy([["lids-icon.cjs",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]]], options);
+  return index.bootstrapLazy([["lids-card.cjs",[[1,"lids-card"]]],["lids-icon.cjs",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]],["lids-masthead.cjs",[[1,"lids-masthead"]]],["lids-option.cjs",[[1,"lids-option",{"value":[1],"selected":[4]}]]],["lids-searchbar.cjs",[[1,"lids-searchbar",{"placeholder":[1],"value":[32]}]]],["lids-select.cjs",[[1,"lids-select",{"value":[1025]}]]]], options);
 });
