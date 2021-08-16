@@ -1,0 +1,37 @@
+$lids-select-padding: var(--lids-space-medium);
+$lids-select-border-radius: var(--lids-radius-default);
+$lids-select-shadow: 0 0 4px 0 var(--lids-color-gray-lighter);
+$lids-select-arrow-color: var(--lids-color-gray-darkest);
+
+:host {
+  display: block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    margin-top: -4px;
+    top: 50%;
+    right: 8px;
+    content: '';
+    width: 0.8rem;
+    height: 0.5rem;
+    background-color: $lids-select-arrow-color;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+
+  .lids-select {
+    width: 100%;
+    margin: 0;
+    padding: $lids-select-padding;
+    border-radius: $lids-select-border-radius;
+    box-shadow: $lids-select-shadow;
+    border: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
