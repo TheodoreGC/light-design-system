@@ -16,6 +16,11 @@ $lids-color-gray: tint($lids-color-gray-dark, 20%);
 $lids-color-gray-light: tint($lids-color-gray, 20%);
 $lids-color-gray-lighter: shade($lids-color-gray-lightest, 20%);
 
+$lids-color-purple: #a020f0;
+$lids-color-purple-dark: shade($lids-color-purple, 20%);
+$lids-color-purple-darker: shade($lids-color-purple-dark, 20%);
+$lids-color-purple-darkest: shade($lids-color-purple-darker, 20%);
+
 :root {
   --lids-color-blue-darkest: #{$lids-color-blue-darkest};
   --lids-color-blue-darker: #{$lids-color-blue-darker};
@@ -30,6 +35,10 @@ $lids-color-gray-lighter: shade($lids-color-gray-lightest, 20%);
   --lids-color-gray: #{$lids-color-gray};
   --lids-color-gray-light: #{$lids-color-gray-light};
   --lids-color-gray-lighter: #{$lids-color-gray-lighter};
+  --lids-color-purple: #{$lids-color-purple};
+  --lids-color-purple-dark: #{$lids-color-purple-dark};
+  --lids-color-purple-darker: #{$lids-color-purple-darker};
+  --lids-color-purple-darkest: #{$lids-color-purple-darkest};
   --lids-color-white: #fff;
   --lids-color-black: #000;
 }

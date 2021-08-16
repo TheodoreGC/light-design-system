@@ -15,6 +15,14 @@ export namespace Components {
     }
     interface LidsMasthead {
     }
+    interface LidsSearchbar {
+        /**
+          * The placeholder to use for the input field.
+          * @type {string}
+          * @memberof Searchbar
+         */
+        "placeholder": string;
+    }
 }
 declare global {
     interface HTMLLidsCardElement extends Components.LidsCard, HTMLStencilElement {
@@ -35,10 +43,17 @@ declare global {
         prototype: HTMLLidsMastheadElement;
         new (): HTMLLidsMastheadElement;
     };
+    interface HTMLLidsSearchbarElement extends Components.LidsSearchbar, HTMLStencilElement {
+    }
+    var HTMLLidsSearchbarElement: {
+        prototype: HTMLLidsSearchbarElement;
+        new (): HTMLLidsSearchbarElement;
+    };
     interface HTMLElementTagNameMap {
         "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
         "lids-masthead": HTMLLidsMastheadElement;
+        "lids-searchbar": HTMLLidsSearchbarElement;
     }
 }
 declare namespace LocalJSX {
@@ -51,10 +66,25 @@ declare namespace LocalJSX {
     }
     interface LidsMasthead {
     }
+    interface LidsSearchbar {
+        /**
+          * Custom event dispatching the value of the input on submission.
+          * @type {EventEmitter<string>}
+          * @memberof Searchbar
+         */
+        "onOnsubmit"?: (event: CustomEvent<string>) => void;
+        /**
+          * The placeholder to use for the input field.
+          * @type {string}
+          * @memberof Searchbar
+         */
+        "placeholder"?: string;
+    }
     interface IntrinsicElements {
         "lids-card": LidsCard;
         "lids-icon": LidsIcon;
         "lids-masthead": LidsMasthead;
+        "lids-searchbar": LidsSearchbar;
     }
 }
 export { LocalJSX as JSX };
@@ -64,6 +94,7 @@ declare module "@stencil/core" {
             "lids-card": LocalJSX.LidsCard & JSXBase.HTMLAttributes<HTMLLidsCardElement>;
             "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
             "lids-masthead": LocalJSX.LidsMasthead & JSXBase.HTMLAttributes<HTMLLidsMastheadElement>;
+            "lids-searchbar": LocalJSX.LidsSearchbar & JSXBase.HTMLAttributes<HTMLLidsSearchbarElement>;
         }
     }
 }

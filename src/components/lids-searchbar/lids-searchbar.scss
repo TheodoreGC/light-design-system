@@ -1,0 +1,56 @@
+$lids-search-form-padding: var(--lids-space-medium);
+$lids-search-form-border-radius: var(--lids-radius-default);
+$lids-search-form-submit-color: var(--lids-color-white);
+$lids-search-form-submit-background-color: var(--lids-color-purple);
+$lids-search-form-submit-background-color--hover: var(--lids-color-purple-dark);
+$lids-search-form-submit-background-color--focus: var(--lids-color-purple-darker);
+$lids-search-form-submit-background-color--active: var(--lids-color-purple-darkest);
+$lids-search-form-submit-border: 1px solid $lids-search-form-submit-background-color;
+$lids-search-form-shadow: 0 0 4px 0 var(--lids-color-gray-lighter);
+
+:host {
+  display: block;
+
+  .lids-search-form {
+    display: inline-flex;
+  }
+
+  .lids-search-form-input,
+  .lids-search-form-submit {
+    padding: $lids-search-form-padding;
+    border-radius: $lids-search-form-border-radius;
+    box-shadow: $lids-search-form-shadow;
+  }
+
+  .lids-search-form-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    outline: none;
+  }
+
+  .lids-search-form-submit {
+    background-color: $lids-search-form-submit-background-color;
+    color: $lids-search-form-submit-color;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    border: $lids-search-form-submit-border;
+    border-left: none;
+
+    &:hover {
+      background-color: $lids-search-form-submit-background-color--hover;
+      border-color: $lids-search-form-submit-background-color--hover;
+    }
+
+    &:focus {
+      background-color: $lids-search-form-submit-background-color--focus;
+      border-color: $lids-search-form-submit-background-color--focus;
+    }
+
+    &:active {
+      background-color: $lids-search-form-submit-background-color--active;
+      border-color: $lids-search-form-submit-background-color--active;
+    }
+  }
+}
