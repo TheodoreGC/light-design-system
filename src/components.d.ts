@@ -15,6 +15,10 @@ export namespace Components {
     }
     interface LidsMasthead {
     }
+    interface LidsOption {
+        "selected": boolean;
+        "value": string;
+    }
     interface LidsSearchbar {
         /**
           * The placeholder to use for the input field.
@@ -22,6 +26,14 @@ export namespace Components {
           * @memberof Searchbar
          */
         "placeholder": string;
+    }
+    interface LidsSelect {
+        /**
+          * The current value of the element.
+          * @type {string}
+          * @memberof Select
+         */
+        "value": string;
     }
 }
 declare global {
@@ -43,17 +55,31 @@ declare global {
         prototype: HTMLLidsMastheadElement;
         new (): HTMLLidsMastheadElement;
     };
+    interface HTMLLidsOptionElement extends Components.LidsOption, HTMLStencilElement {
+    }
+    var HTMLLidsOptionElement: {
+        prototype: HTMLLidsOptionElement;
+        new (): HTMLLidsOptionElement;
+    };
     interface HTMLLidsSearchbarElement extends Components.LidsSearchbar, HTMLStencilElement {
     }
     var HTMLLidsSearchbarElement: {
         prototype: HTMLLidsSearchbarElement;
         new (): HTMLLidsSearchbarElement;
     };
+    interface HTMLLidsSelectElement extends Components.LidsSelect, HTMLStencilElement {
+    }
+    var HTMLLidsSelectElement: {
+        prototype: HTMLLidsSelectElement;
+        new (): HTMLLidsSelectElement;
+    };
     interface HTMLElementTagNameMap {
         "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
         "lids-masthead": HTMLLidsMastheadElement;
+        "lids-option": HTMLLidsOptionElement;
         "lids-searchbar": HTMLLidsSearchbarElement;
+        "lids-select": HTMLLidsSelectElement;
     }
 }
 declare namespace LocalJSX {
@@ -65,6 +91,10 @@ declare namespace LocalJSX {
         "width"?: string;
     }
     interface LidsMasthead {
+    }
+    interface LidsOption {
+        "selected"?: boolean;
+        "value"?: string;
     }
     interface LidsSearchbar {
         /**
@@ -80,11 +110,27 @@ declare namespace LocalJSX {
          */
         "placeholder"?: string;
     }
+    interface LidsSelect {
+        /**
+          * Custom event dispatching the value of the select on submission.
+          * @type {EventEmitter<string>}
+          * @memberof Select
+         */
+        "onOnchange"?: (event: CustomEvent<string>) => void;
+        /**
+          * The current value of the element.
+          * @type {string}
+          * @memberof Select
+         */
+        "value"?: string;
+    }
     interface IntrinsicElements {
         "lids-card": LidsCard;
         "lids-icon": LidsIcon;
         "lids-masthead": LidsMasthead;
+        "lids-option": LidsOption;
         "lids-searchbar": LidsSearchbar;
+        "lids-select": LidsSelect;
     }
 }
 export { LocalJSX as JSX };
@@ -94,7 +140,9 @@ declare module "@stencil/core" {
             "lids-card": LocalJSX.LidsCard & JSXBase.HTMLAttributes<HTMLLidsCardElement>;
             "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
             "lids-masthead": LocalJSX.LidsMasthead & JSXBase.HTMLAttributes<HTMLLidsMastheadElement>;
+            "lids-option": LocalJSX.LidsOption & JSXBase.HTMLAttributes<HTMLLidsOptionElement>;
             "lids-searchbar": LocalJSX.LidsSearchbar & JSXBase.HTMLAttributes<HTMLLidsSearchbarElement>;
+            "lids-select": LocalJSX.LidsSelect & JSXBase.HTMLAttributes<HTMLLidsSelectElement>;
         }
     }
 }
