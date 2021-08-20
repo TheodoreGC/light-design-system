@@ -1,0 +1,89 @@
+:root {
+  /**
+   * @prop --lids-switch-width: Define the width of the toggle switch.
+   */
+  --lids-switch-width: 60px;
+
+  /**
+   * @prop --lids-switch-height: Define the height of the toggle switch.
+   */
+  --lids-switch-height: 34px;
+}
+
+$lids-switch-width: var(--lids-switch-width, 60px);
+$lids-switch-height: var(--lids-switch-height, 34px);
+
+$lids-switch-slider-background-color: var(--lids-color-gray-lighter);
+$lids-switch-slider-background-color--checked: var(--lids-color-purple);
+$lids-switch-slider-box-shadow: 0 0 1px $lids-switch-slider-background-color--checked;
+$lids-switch-slider-transition: all var(--lids-transition-quickly);
+$lids-switch-slider-border-radius: $lids-switch-height;
+
+$lids-switch-slider-button-width: calc(#{$lids-switch-height} - var(--lids-space-x-small));
+$lids-switch-slider-button-height: calc(#{$lids-switch-height} - var(--lids-space-x-small));
+$lids-switch-slider-button-spacing: var(--lids-space-xx-small);
+$lids-switch-slider-button-background-color: var(--lids-color-white);
+$lids-switch-slider-button-border-radius: var(--lids-radius-circle);
+
+:host {
+  display: block;
+
+  .lids-switch-form-label {
+    position: relative;
+    display: inline-block;
+    width: $lids-switch-width;
+    height: $lids-switch-height;
+  }
+
+  .lids-switch-form-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .lids-switch-form-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $lids-switch-slider-background-color;
+    -webkit-transition: $lids-switch-slider-transition;
+    transition: $lids-switch-slider-transition;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: $lids-switch-slider-button-width;
+      height: $lids-switch-slider-button-height;
+      left: $lids-switch-slider-button-spacing;
+      bottom: $lids-switch-slider-button-spacing;
+      background-color: $lids-switch-slider-button-background-color;
+      -webkit-transition: $lids-switch-slider-transition;
+      transition: $lids-switch-slider-transition;
+    }
+
+    &--rounded {
+      border-radius: $lids-switch-slider-border-radius;
+
+      &::before {
+        border-radius: $lids-switch-slider-button-border-radius;
+      }
+    }
+  }
+
+  .lids-switch-form-checkbox:checked + .lids-switch-form-slider {
+    background-color: $lids-switch-slider-background-color--checked;
+  }
+
+  .lids-switch-form-checkbox:focus + .lids-switch-form-slider {
+    box-shadow: $lids-switch-slider-box-shadow;
+  }
+
+  .lids-switch-form-checkbox:checked + .lids-switch-form-slider::before {
+    -webkit-transform: translateX($lids-switch-slider-button-width);
+    -ms-transform: translateX($lids-switch-slider-button-width);
+    transform: translateX($lids-switch-slider-button-width);
+  }
+}

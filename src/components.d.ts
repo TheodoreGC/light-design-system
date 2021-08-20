@@ -35,6 +35,20 @@ export namespace Components {
          */
         "value": string;
     }
+    interface LidsSwitch {
+        /**
+          * Specify the element should be pre-selected.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "checked": boolean;
+        /**
+          * Define the shape of the toggle switch.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "rounded": boolean;
+    }
 }
 declare global {
     interface HTMLLidsCardElement extends Components.LidsCard, HTMLStencilElement {
@@ -73,6 +87,12 @@ declare global {
         prototype: HTMLLidsSelectElement;
         new (): HTMLLidsSelectElement;
     };
+    interface HTMLLidsSwitchElement extends Components.LidsSwitch, HTMLStencilElement {
+    }
+    var HTMLLidsSwitchElement: {
+        prototype: HTMLLidsSwitchElement;
+        new (): HTMLLidsSwitchElement;
+    };
     interface HTMLElementTagNameMap {
         "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
@@ -80,6 +100,7 @@ declare global {
         "lids-option": HTMLLidsOptionElement;
         "lids-searchbar": HTMLLidsSearchbarElement;
         "lids-select": HTMLLidsSelectElement;
+        "lids-switch": HTMLLidsSwitchElement;
     }
 }
 declare namespace LocalJSX {
@@ -124,6 +145,26 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
+    interface LidsSwitch {
+        /**
+          * Specify the element should be pre-selected.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "checked"?: boolean;
+        /**
+          * Custom event dispatching the value of the input on submission.
+          * @type {EventEmitter<{ checked: boolean }>}
+          * @memberof Switch
+         */
+        "onOnchange"?: (event: CustomEvent<{ checked: boolean }>) => void;
+        /**
+          * Define the shape of the toggle switch.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "rounded"?: boolean;
+    }
     interface IntrinsicElements {
         "lids-card": LidsCard;
         "lids-icon": LidsIcon;
@@ -131,6 +172,7 @@ declare namespace LocalJSX {
         "lids-option": LidsOption;
         "lids-searchbar": LidsSearchbar;
         "lids-select": LidsSelect;
+        "lids-switch": LidsSwitch;
     }
 }
 export { LocalJSX as JSX };
@@ -143,6 +185,7 @@ declare module "@stencil/core" {
             "lids-option": LocalJSX.LidsOption & JSXBase.HTMLAttributes<HTMLLidsOptionElement>;
             "lids-searchbar": LocalJSX.LidsSearchbar & JSXBase.HTMLAttributes<HTMLLidsSearchbarElement>;
             "lids-select": LocalJSX.LidsSelect & JSXBase.HTMLAttributes<HTMLLidsSelectElement>;
+            "lids-switch": LocalJSX.LidsSwitch & JSXBase.HTMLAttributes<HTMLLidsSwitchElement>;
         }
     }
 }
