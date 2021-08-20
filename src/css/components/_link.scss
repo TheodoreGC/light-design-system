@@ -1,0 +1,22 @@
+$lids-link-color: var(--lids-color-purple);
+$lids-link-color--hover: var(--lids-color-purple-dark);
+$lids-link-color--focus: var(--lids-color-purple-darker);
+$lids-link-color--active: var(--lids-color-purple-darkest);
+
+.lids-link {
+  text-decoration: none;
+  color: $lids-link-color;
+
+  &:hover {
+    text-decoration: underline;
+    color: $lids-link-color--hover;
+  }
+
+  &:focus {
+    color: $lids-link-color--focus;
+  }
+
+  &:active {
+    color: $lids-link-color--active;
+  }
+}
