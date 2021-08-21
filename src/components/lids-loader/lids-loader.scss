@@ -1,0 +1,62 @@
+:root {
+  /**
+   * @prop --lids-loader-thickness: Define the thickness of the ring of the loader.
+   */
+  --lids-loader-thickness: 4px;
+
+  /**
+   * @prop --lids-loader-size-ratio: Define the size between the initial and final state of the loader.
+   */
+  --lids-loader-size-ratio: 1;
+}
+
+$lids-loader-element-border: var(--lids-loader-thickness, var(--lids-space-xx-small)) solid var(--lids-color-gray-lighter);
+$lids-loader-element-border-radius: var(--lids-radius-circle);
+$lids-loader-element-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+$lids-loader-element-animation-delay: -0.5s;
+
+$lids-ripple-lds-ripple-top--start: calc(28px * var(--lids-loader-size-ratio, 1));
+$lids-ripple-lds-ripple-left--start: calc(28px * var(--lids-loader-size-ratio, 1));
+$lids-ripple-lds-ripple-top--end: -1px;
+$lids-ripple-lds-ripple-left--end: -1px;
+$lids-ripple-lds-ripple-width: calc(58px * var(--lids-loader-size-ratio, 1));
+$lids-ripple-lds-ripple-height: calc(58px * var(--lids-loader-size-ratio, 1));
+
+:host(.lids-loader--concealed) {
+  display: none;
+}
+
+:host {
+  display: inline-block;
+  position: relative;
+
+  .lids-loader-element {
+    position: absolute;
+    border: $lids-loader-element-border;
+    opacity: 1;
+    border-radius: $lids-loader-element-border-radius;
+    animation: $lids-loader-element-animation;
+
+    &:nth-child(2) {
+      animation-delay: $lids-loader-element-animation-delay;
+    }
+  }
+
+  @keyframes lds-ripple {
+    0% {
+      top: $lids-ripple-lds-ripple-top--start;
+      left: $lids-ripple-lds-ripple-left--start;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+
+    100% {
+      top: $lids-ripple-lds-ripple-top--end;
+      left: $lids-ripple-lds-ripple-top--end;
+      width: $lids-ripple-lds-ripple-width;
+      height: $lids-ripple-lds-ripple-height;
+      opacity: 0;
+    }
+  }
+}

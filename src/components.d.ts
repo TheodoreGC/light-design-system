@@ -13,6 +13,14 @@ export namespace Components {
         "name": string;
         "width": string;
     }
+    interface LidsLoader {
+        /**
+          * Define if the component is visible or not.
+          * @type {boolean}
+          * @memberof Loader
+         */
+        "concealed": boolean;
+    }
     interface LidsMasthead {
     }
     interface LidsOption {
@@ -63,6 +71,12 @@ declare global {
         prototype: HTMLLidsIconElement;
         new (): HTMLLidsIconElement;
     };
+    interface HTMLLidsLoaderElement extends Components.LidsLoader, HTMLStencilElement {
+    }
+    var HTMLLidsLoaderElement: {
+        prototype: HTMLLidsLoaderElement;
+        new (): HTMLLidsLoaderElement;
+    };
     interface HTMLLidsMastheadElement extends Components.LidsMasthead, HTMLStencilElement {
     }
     var HTMLLidsMastheadElement: {
@@ -96,6 +110,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
+        "lids-loader": HTMLLidsLoaderElement;
         "lids-masthead": HTMLLidsMastheadElement;
         "lids-option": HTMLLidsOptionElement;
         "lids-searchbar": HTMLLidsSearchbarElement;
@@ -110,6 +125,14 @@ declare namespace LocalJSX {
         "height"?: string;
         "name"?: string;
         "width"?: string;
+    }
+    interface LidsLoader {
+        /**
+          * Define if the component is visible or not.
+          * @type {boolean}
+          * @memberof Loader
+         */
+        "concealed"?: boolean;
     }
     interface LidsMasthead {
     }
@@ -168,6 +191,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "lids-card": LidsCard;
         "lids-icon": LidsIcon;
+        "lids-loader": LidsLoader;
         "lids-masthead": LidsMasthead;
         "lids-option": LidsOption;
         "lids-searchbar": LidsSearchbar;
@@ -181,6 +205,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "lids-card": LocalJSX.LidsCard & JSXBase.HTMLAttributes<HTMLLidsCardElement>;
             "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
+            "lids-loader": LocalJSX.LidsLoader & JSXBase.HTMLAttributes<HTMLLidsLoaderElement>;
             "lids-masthead": LocalJSX.LidsMasthead & JSXBase.HTMLAttributes<HTMLLidsMastheadElement>;
             "lids-option": LocalJSX.LidsOption & JSXBase.HTMLAttributes<HTMLLidsOptionElement>;
             "lids-searchbar": LocalJSX.LidsSearchbar & JSXBase.HTMLAttributes<HTMLLidsSearchbarElement>;
