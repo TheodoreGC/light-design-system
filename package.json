@@ -1,6 +1,6 @@
 {
   "name": "lids",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Light Design System is a Web Component library built using StencilJS. It works across multiple JavaScript frameworks including Plain JS, React, Vue, and Angular. It makes use of Storybook development environment so that each component can be browsed in a documentation-style site that includes documentation and real-life examples.",
   "main": "dist/index.cjs.js",
   "contributors": [

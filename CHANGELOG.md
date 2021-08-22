@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/TheodoreGC/light-design-system/compare/v0.0.2...v0.0.3) (2021-08-22)
+
+
+### Features
+
+* **link:** add style for link ([d4ea8b8](https://github.com/TheodoreGC/light-design-system/commit/d4ea8b881083f9291c107006d7398948f2f8f53e))
+* **loader:** create loader component ([4c9955a](https://github.com/TheodoreGC/light-design-system/commit/4c9955a083504dde0e4244a962f80429ea5f0602))
+* **pill:** create pill component ([d4b5c56](https://github.com/TheodoreGC/light-design-system/commit/d4b5c56b94469ffe6800c1adec06ac77ec1d67e2))
+* **switch:** create toggle switch component ([ada1e47](https://github.com/TheodoreGC/light-design-system/commit/ada1e4706aa932b7a5e6f3bd31248065f7ae777b))
+
 ### 0.0.2 (2021-08-16)
 
 
