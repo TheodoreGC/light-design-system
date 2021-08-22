@@ -1,0 +1,41 @@
+$lids-pill-background-color: var(--lids-color-purple);
+$lids-pill-background-color--hover: var(--lids-color-purple-dark);
+$lids-pill-background-color--focus: var(--lids-color-purple-darker);
+$lids-pill-background-color--active: var(--lids-color-purple-darkest);
+$lids-pill-color: var(--lids-color-white);
+$lids-pill-padding: var(--lids-space-small) var(--lids-space-large);
+$lids-pill-margin: var(--lids-space-xx-small) var(--lids-space-xxx-small);
+$lids-pill-border-radius: var(--lids-radius-pill);
+
+:host {
+  display: inline-block;
+
+  ::slotted(a) {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .lids-pill-wrapper {
+    background-color: $lids-pill-background-color;
+    border: none;
+    color: $lids-pill-color;
+    padding: $lids-pill-padding;
+    text-align: center;
+    text-decoration: none;
+    margin: $lids-pill-margin;
+    cursor: pointer;
+    border-radius: $lids-pill-border-radius;
+
+    &:hover {
+      background-color: $lids-pill-background-color--hover;
+    }
+
+    &:focus {
+      background-color: $lids-pill-background-color--focus;
+    }
+
+    &:active {
+      background-color: $lids-pill-background-color--active;
+    }
+  }
+}
