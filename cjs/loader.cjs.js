@@ -30,7 +30,7 @@ const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return Promise.resolve();
   return patchEsm().then(() => {
   appGlobals.globalScripts();
-  return index.bootstrapLazy([["lids-card.cjs",[[1,"lids-card"]]],["lids-icon.cjs",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]],["lids-masthead.cjs",[[1,"lids-masthead"]]],["lids-option.cjs",[[1,"lids-option",{"value":[1],"selected":[4]}]]],["lids-searchbar.cjs",[[1,"lids-searchbar",{"placeholder":[1],"value":[32]}]]],["lids-select.cjs",[[1,"lids-select",{"value":[1025]}]]]], options);
+  return index.bootstrapLazy([["lids-card.cjs",[[1,"lids-card"]]],["lids-icon.cjs",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]],["lids-loader.cjs",[[1,"lids-loader",{"concealed":[4]}]]],["lids-masthead.cjs",[[1,"lids-masthead"]]],["lids-option.cjs",[[1,"lids-option",{"value":[1],"selected":[4]}]]],["lids-pill.cjs",[[1,"lids-pill"]]],["lids-searchbar.cjs",[[1,"lids-searchbar",{"placeholder":[1],"value":[32]}]]],["lids-select.cjs",[[1,"lids-select",{"value":[1025]}]]],["lids-switch.cjs",[[1,"lids-switch",{"rounded":[4],"checked":[516]}]]]], options);
   });
 };
 

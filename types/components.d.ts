@@ -13,11 +13,21 @@ export namespace Components {
         "name": string;
         "width": string;
     }
+    interface LidsLoader {
+        /**
+          * Define if the component is visible or not.
+          * @type {boolean}
+          * @memberof Loader
+         */
+        "concealed": boolean;
+    }
     interface LidsMasthead {
     }
     interface LidsOption {
         "selected": boolean;
         "value": string;
+    }
+    interface LidsPill {
     }
     interface LidsSearchbar {
         /**
@@ -35,6 +45,20 @@ export namespace Components {
          */
         "value": string;
     }
+    interface LidsSwitch {
+        /**
+          * Specify the element should be pre-selected.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "checked": boolean;
+        /**
+          * Define the shape of the toggle switch.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "rounded": boolean;
+    }
 }
 declare global {
     interface HTMLLidsCardElement extends Components.LidsCard, HTMLStencilElement {
@@ -49,6 +73,12 @@ declare global {
         prototype: HTMLLidsIconElement;
         new (): HTMLLidsIconElement;
     };
+    interface HTMLLidsLoaderElement extends Components.LidsLoader, HTMLStencilElement {
+    }
+    var HTMLLidsLoaderElement: {
+        prototype: HTMLLidsLoaderElement;
+        new (): HTMLLidsLoaderElement;
+    };
     interface HTMLLidsMastheadElement extends Components.LidsMasthead, HTMLStencilElement {
     }
     var HTMLLidsMastheadElement: {
@@ -60,6 +90,12 @@ declare global {
     var HTMLLidsOptionElement: {
         prototype: HTMLLidsOptionElement;
         new (): HTMLLidsOptionElement;
+    };
+    interface HTMLLidsPillElement extends Components.LidsPill, HTMLStencilElement {
+    }
+    var HTMLLidsPillElement: {
+        prototype: HTMLLidsPillElement;
+        new (): HTMLLidsPillElement;
     };
     interface HTMLLidsSearchbarElement extends Components.LidsSearchbar, HTMLStencilElement {
     }
@@ -73,13 +109,22 @@ declare global {
         prototype: HTMLLidsSelectElement;
         new (): HTMLLidsSelectElement;
     };
+    interface HTMLLidsSwitchElement extends Components.LidsSwitch, HTMLStencilElement {
+    }
+    var HTMLLidsSwitchElement: {
+        prototype: HTMLLidsSwitchElement;
+        new (): HTMLLidsSwitchElement;
+    };
     interface HTMLElementTagNameMap {
         "lids-card": HTMLLidsCardElement;
         "lids-icon": HTMLLidsIconElement;
+        "lids-loader": HTMLLidsLoaderElement;
         "lids-masthead": HTMLLidsMastheadElement;
         "lids-option": HTMLLidsOptionElement;
+        "lids-pill": HTMLLidsPillElement;
         "lids-searchbar": HTMLLidsSearchbarElement;
         "lids-select": HTMLLidsSelectElement;
+        "lids-switch": HTMLLidsSwitchElement;
     }
 }
 declare namespace LocalJSX {
@@ -90,11 +135,21 @@ declare namespace LocalJSX {
         "name"?: string;
         "width"?: string;
     }
+    interface LidsLoader {
+        /**
+          * Define if the component is visible or not.
+          * @type {boolean}
+          * @memberof Loader
+         */
+        "concealed"?: boolean;
+    }
     interface LidsMasthead {
     }
     interface LidsOption {
         "selected"?: boolean;
         "value"?: string;
+    }
+    interface LidsPill {
     }
     interface LidsSearchbar {
         /**
@@ -124,13 +179,36 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
+    interface LidsSwitch {
+        /**
+          * Specify the element should be pre-selected.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "checked"?: boolean;
+        /**
+          * Custom event dispatching the value of the input on submission.
+          * @type {EventEmitter<{ checked: boolean }>}
+          * @memberof Switch
+         */
+        "onOnchange"?: (event: CustomEvent<{ checked: boolean }>) => void;
+        /**
+          * Define the shape of the toggle switch.
+          * @type {boolean}
+          * @memberof Switch
+         */
+        "rounded"?: boolean;
+    }
     interface IntrinsicElements {
         "lids-card": LidsCard;
         "lids-icon": LidsIcon;
+        "lids-loader": LidsLoader;
         "lids-masthead": LidsMasthead;
         "lids-option": LidsOption;
+        "lids-pill": LidsPill;
         "lids-searchbar": LidsSearchbar;
         "lids-select": LidsSelect;
+        "lids-switch": LidsSwitch;
     }
 }
 export { LocalJSX as JSX };
@@ -139,10 +217,13 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "lids-card": LocalJSX.LidsCard & JSXBase.HTMLAttributes<HTMLLidsCardElement>;
             "lids-icon": LocalJSX.LidsIcon & JSXBase.HTMLAttributes<HTMLLidsIconElement>;
+            "lids-loader": LocalJSX.LidsLoader & JSXBase.HTMLAttributes<HTMLLidsLoaderElement>;
             "lids-masthead": LocalJSX.LidsMasthead & JSXBase.HTMLAttributes<HTMLLidsMastheadElement>;
             "lids-option": LocalJSX.LidsOption & JSXBase.HTMLAttributes<HTMLLidsOptionElement>;
+            "lids-pill": LocalJSX.LidsPill & JSXBase.HTMLAttributes<HTMLLidsPillElement>;
             "lids-searchbar": LocalJSX.LidsSearchbar & JSXBase.HTMLAttributes<HTMLLidsSearchbarElement>;
             "lids-select": LocalJSX.LidsSelect & JSXBase.HTMLAttributes<HTMLLidsSelectElement>;
+            "lids-switch": LocalJSX.LidsSwitch & JSXBase.HTMLAttributes<HTMLLidsSwitchElement>;
         }
     }
 }

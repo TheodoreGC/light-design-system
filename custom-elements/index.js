@@ -9380,6 +9380,27 @@ const Icon = class extends HTMLElement {
   static get style() { return lidsIconCss; }
 };
 
+const lidsLoaderCss = ":root{--lids-loader-thickness:4px;--lids-loader-size-ratio:1}:host(.lids-loader--concealed){display:none}:host{display:inline-block;position:relative}:host .lids-loader-element{position:absolute;border:var(--lids-loader-thickness, var(--lids-space-xx-small)) solid var(--lids-color-gray-lighter);opacity:1;border-radius:var(--lids-radius-circle);animation:lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite}:host .lids-loader-element:nth-child(2){animation-delay:-0.5s}@keyframes lds-ripple{0%{top:calc(28px * var(--lids-loader-size-ratio, 1));left:calc(28px * var(--lids-loader-size-ratio, 1));width:0;height:0;opacity:1}100%{top:-1px;left:-1px;width:calc(58px * var(--lids-loader-size-ratio, 1));height:calc(58px * var(--lids-loader-size-ratio, 1));opacity:0}}";
+
+const Loader = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    /**
+     * Define if the component is visible or not.
+     *
+     * @type {boolean}
+     * @memberof Loader
+     */
+    this.concealed = false;
+  }
+  render() {
+    return (h(Host, { class: { 'lids-loader--concealed': this.concealed } }, h("div", { class: 'lids-loader-element' }), h("div", { class: 'lids-loader-element' })));
+  }
+  static get style() { return lidsLoaderCss; }
+};
+
 const lidsMastheadCss = ":host{display:block;box-shadow:0 8px 6px -8px var(--lids-color-gray-lighter);padding:0 var(--lids-space-xxxx-large)}:host .lids-masthead-container{height:56px;display:flex;align-items:center}:host .lids-masthead-title{display:flex;flex:0 1 auto}:host .lids-masthead-action{display:flex;justify-content:flex-end;flex:1 0 auto}:host .lids-masthead-action [name=action]::slotted(*){display:flex;padding:0;align-items:center;justify-content:flex-end}";
 
 const Masthead = class extends HTMLElement {
@@ -9408,6 +9429,20 @@ const Option = class extends HTMLElement {
     return (h(Host, null, h("slot", null)));
   }
   static get style() { return lidsOptionCss; }
+};
+
+const lidsPillCss = ":host{display:inline-block}:host ::slotted(a){color:inherit !important;text-decoration:none !important}:host .lids-pill-wrapper{background-color:var(--lids-color-purple);border:none;color:var(--lids-color-white);padding:var(--lids-space-small) var(--lids-space-large);text-align:center;text-decoration:none;margin:var(--lids-space-xx-small) var(--lids-space-xxx-small);cursor:pointer;border-radius:var(--lids-radius-pill)}:host .lids-pill-wrapper:hover{background-color:var(--lids-color-purple-dark)}:host .lids-pill-wrapper:focus{background-color:var(--lids-color-purple-darker)}:host .lids-pill-wrapper:active{background-color:var(--lids-color-purple-darkest)}";
+
+const Pill = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+  }
+  render() {
+    return (h(Host, null, h("div", { class: "lids-pill-wrapper" }, h("slot", null))));
+  }
+  static get style() { return lidsPillCss; }
 };
 
 const lidsSearchbarCss = ":host{display:block}:host .lids-search-form{display:inline-flex}:host .lids-search-form-input,:host .lids-search-form-submit{padding:var(--lids-space-medium);border-radius:var(--lids-radius-default);box-shadow:0 0 4px 0 var(--lids-color-gray-lighter)}:host .lids-search-form-input{border-top-right-radius:0;border-bottom-right-radius:0;border:none;outline:none}:host .lids-search-form-submit{background-color:var(--lids-color-purple);color:var(--lids-color-white);border-top-left-radius:0;border-bottom-left-radius:0;cursor:pointer;border:1px solid var(--lids-color-purple);border-left:none}:host .lids-search-form-submit:hover{background-color:var(--lids-color-purple-dark);border-color:var(--lids-color-purple-dark)}:host .lids-search-form-submit:focus{background-color:var(--lids-color-purple-darker);border-color:var(--lids-color-purple-darker)}:host .lids-search-form-submit:active{background-color:var(--lids-color-purple-darkest);border-color:var(--lids-color-purple-darkest)}";
@@ -9480,22 +9515,65 @@ const Select = class extends HTMLElement {
   static get style() { return lidsSelectCss; }
 };
 
+const lidsSwitchCss = ":root{--lids-switch-width:60px;--lids-switch-height:34px}:host{display:block}:host .lids-switch-form-label{position:relative;display:inline-block;width:var(--lids-switch-width, 60px);height:var(--lids-switch-height, 34px)}:host .lids-switch-form-checkbox{opacity:0;width:0;height:0}:host .lids-switch-form-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:var(--lids-color-gray-lighter);-webkit-transition:all var(--lids-transition-quickly);transition:all var(--lids-transition-quickly)}:host .lids-switch-form-slider::before{position:absolute;content:\"\";width:calc(var(--lids-switch-height, 34px) - var(--lids-space-x-small));height:calc(var(--lids-switch-height, 34px) - var(--lids-space-x-small));left:var(--lids-space-xx-small);bottom:var(--lids-space-xx-small);background-color:var(--lids-color-white);-webkit-transition:all var(--lids-transition-quickly);transition:all var(--lids-transition-quickly)}:host .lids-switch-form-slider--rounded{border-radius:var(--lids-switch-height, 34px)}:host .lids-switch-form-slider--rounded::before{border-radius:var(--lids-radius-circle)}:host .lids-switch-form-checkbox:checked+.lids-switch-form-slider{background-color:var(--lids-color-purple)}:host .lids-switch-form-checkbox:focus+.lids-switch-form-slider{box-shadow:0 0 1px var(--lids-color-purple)}:host .lids-switch-form-checkbox:checked+.lids-switch-form-slider::before{-webkit-transform:translateX(calc(var(--lids-switch-height, 34px) - var(--lids-space-x-small)));-ms-transform:translateX(calc(var(--lids-switch-height, 34px) - var(--lids-space-x-small)));transform:translateX(calc(var(--lids-switch-height, 34px) - var(--lids-space-x-small)))}";
+
+const Switch = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    this.change = createEvent(this, "onchange", 7);
+    /**
+     * Define the shape of the toggle switch.
+     *
+     * @type {boolean}
+     * @memberof Switch
+     */
+    this.rounded = false;
+    /**
+     * Specify the element should be pre-selected.
+     *
+     * @type {boolean}
+     * @memberof Switch
+     */
+    this.checked = false;
+  }
+  connectedCallback() {
+    this.handleSwitch = this.handleSwitch.bind(this);
+  }
+  handleSwitch(event) {
+    event.preventDefault();
+    this.checked = event.target.checked;
+    this.change.emit({ checked: this.checked });
+  }
+  render() {
+    return (h(Host, null, h("label", { class: 'lids-switch-form-label' }, h("input", { class: 'lids-switch-form-checkbox', type: "checkbox", checked: this.checked, onInput: this.handleSwitch }), h("span", { class: { 'lids-switch-form-slider': true, 'lids-switch-form-slider--rounded': this.rounded } }))));
+  }
+  static get style() { return lidsSwitchCss; }
+};
+
 globalScripts();
 const LidsCard = /*@__PURE__*/proxyCustomElement(Card, [1,"lids-card"]);
 const LidsIcon = /*@__PURE__*/proxyCustomElement(Icon, [1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]);
+const LidsLoader = /*@__PURE__*/proxyCustomElement(Loader, [1,"lids-loader",{"concealed":[4]}]);
 const LidsMasthead = /*@__PURE__*/proxyCustomElement(Masthead, [1,"lids-masthead"]);
 const LidsOption = /*@__PURE__*/proxyCustomElement(Option, [1,"lids-option",{"value":[1],"selected":[4]}]);
+const LidsPill = /*@__PURE__*/proxyCustomElement(Pill, [1,"lids-pill"]);
 const LidsSearchbar = /*@__PURE__*/proxyCustomElement(Searchbar, [1,"lids-searchbar",{"placeholder":[1],"value":[32]}]);
 const LidsSelect = /*@__PURE__*/proxyCustomElement(Select, [1,"lids-select",{"value":[1025]}]);
+const LidsSwitch = /*@__PURE__*/proxyCustomElement(Switch, [1,"lids-switch",{"rounded":[4],"checked":[516]}]);
 const defineCustomElements = (opts) => {
   if (typeof customElements !== 'undefined') {
     [
       LidsCard,
   LidsIcon,
+  LidsLoader,
   LidsMasthead,
   LidsOption,
+  LidsPill,
   LidsSearchbar,
-  LidsSelect
+  LidsSelect,
+  LidsSwitch
     ].forEach(cmp => {
       if (!customElements.get(cmp.is)) {
         customElements.define(cmp.is, cmp, opts);
@@ -9504,4 +9582,4 @@ const defineCustomElements = (opts) => {
   }
 };
 
-export { LidsCard, LidsIcon, LidsMasthead, LidsOption, LidsSearchbar, LidsSelect, defineCustomElements };
+export { LidsCard, LidsIcon, LidsLoader, LidsMasthead, LidsOption, LidsPill, LidsSearchbar, LidsSelect, LidsSwitch, defineCustomElements };

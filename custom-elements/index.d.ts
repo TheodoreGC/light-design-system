@@ -14,6 +14,12 @@ export const LidsIcon: {
   new (): LidsIcon;
 };
 
+interface LidsLoader extends Components.LidsLoader, HTMLElement {}
+export const LidsLoader: {
+  prototype: LidsLoader;
+  new (): LidsLoader;
+};
+
 interface LidsMasthead extends Components.LidsMasthead, HTMLElement {}
 export const LidsMasthead: {
   prototype: LidsMasthead;
@@ -26,6 +32,12 @@ export const LidsOption: {
   new (): LidsOption;
 };
 
+interface LidsPill extends Components.LidsPill, HTMLElement {}
+export const LidsPill: {
+  prototype: LidsPill;
+  new (): LidsPill;
+};
+
 interface LidsSearchbar extends Components.LidsSearchbar, HTMLElement {}
 export const LidsSearchbar: {
   prototype: LidsSearchbar;
@@ -36,6 +48,12 @@ interface LidsSelect extends Components.LidsSelect, HTMLElement {}
 export const LidsSelect: {
   prototype: LidsSelect;
   new (): LidsSelect;
+};
+
+interface LidsSwitch extends Components.LidsSwitch, HTMLElement {}
+export const LidsSwitch: {
+  prototype: LidsSwitch;
+  new (): LidsSwitch;
 };
 
 /**

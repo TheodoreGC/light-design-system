@@ -118,5 +118,5 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   globalScripts();
-  return bootstrapLazy([["lids-card",[[1,"lids-card"]]],["lids-icon",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]],["lids-masthead",[[1,"lids-masthead"]]],["lids-option",[[1,"lids-option",{"value":[1],"selected":[4]}]]],["lids-searchbar",[[1,"lids-searchbar",{"placeholder":[1],"value":[32]}]]],["lids-select",[[1,"lids-select",{"value":[1025]}]]]], options);
+  return bootstrapLazy([["lids-card",[[1,"lids-card"]]],["lids-icon",[[1,"lids-icon",{"name":[513],"width":[513],"height":[513]}]]],["lids-loader",[[1,"lids-loader",{"concealed":[4]}]]],["lids-masthead",[[1,"lids-masthead"]]],["lids-option",[[1,"lids-option",{"value":[1],"selected":[4]}]]],["lids-pill",[[1,"lids-pill"]]],["lids-searchbar",[[1,"lids-searchbar",{"placeholder":[1],"value":[32]}]]],["lids-select",[[1,"lids-select",{"value":[1025]}]]],["lids-switch",[[1,"lids-switch",{"rounded":[4],"checked":[516]}]]]], options);
 });

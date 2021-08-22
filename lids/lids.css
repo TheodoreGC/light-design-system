@@ -249,3 +249,19 @@ table {
   --lids-z-index-modal: 900;
   --lids-z-index-popup: 950;
 }
+
+/* COMPONENTS */
+.lids-link {
+  text-decoration: none;
+  color: var(--lids-color-purple);
+}
+.lids-link:hover {
+  text-decoration: underline;
+  color: var(--lids-color-purple-dark);
+}
+.lids-link:focus {
+  color: var(--lids-color-purple-darker);
+}
+.lids-link:active {
+  color: var(--lids-color-purple-darkest);
+}
