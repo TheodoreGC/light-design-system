@@ -27,6 +27,8 @@ export namespace Components {
         "selected": boolean;
         "value": string;
     }
+    interface LidsPill {
+    }
     interface LidsSearchbar {
         /**
           * The placeholder to use for the input field.
@@ -89,6 +91,12 @@ declare global {
         prototype: HTMLLidsOptionElement;
         new (): HTMLLidsOptionElement;
     };
+    interface HTMLLidsPillElement extends Components.LidsPill, HTMLStencilElement {
+    }
+    var HTMLLidsPillElement: {
+        prototype: HTMLLidsPillElement;
+        new (): HTMLLidsPillElement;
+    };
     interface HTMLLidsSearchbarElement extends Components.LidsSearchbar, HTMLStencilElement {
     }
     var HTMLLidsSearchbarElement: {
@@ -113,6 +121,7 @@ declare global {
         "lids-loader": HTMLLidsLoaderElement;
         "lids-masthead": HTMLLidsMastheadElement;
         "lids-option": HTMLLidsOptionElement;
+        "lids-pill": HTMLLidsPillElement;
         "lids-searchbar": HTMLLidsSearchbarElement;
         "lids-select": HTMLLidsSelectElement;
         "lids-switch": HTMLLidsSwitchElement;
@@ -139,6 +148,8 @@ declare namespace LocalJSX {
     interface LidsOption {
         "selected"?: boolean;
         "value"?: string;
+    }
+    interface LidsPill {
     }
     interface LidsSearchbar {
         /**
@@ -194,6 +205,7 @@ declare namespace LocalJSX {
         "lids-loader": LidsLoader;
         "lids-masthead": LidsMasthead;
         "lids-option": LidsOption;
+        "lids-pill": LidsPill;
         "lids-searchbar": LidsSearchbar;
         "lids-select": LidsSelect;
         "lids-switch": LidsSwitch;
@@ -208,6 +220,7 @@ declare module "@stencil/core" {
             "lids-loader": LocalJSX.LidsLoader & JSXBase.HTMLAttributes<HTMLLidsLoaderElement>;
             "lids-masthead": LocalJSX.LidsMasthead & JSXBase.HTMLAttributes<HTMLLidsMastheadElement>;
             "lids-option": LocalJSX.LidsOption & JSXBase.HTMLAttributes<HTMLLidsOptionElement>;
+            "lids-pill": LocalJSX.LidsPill & JSXBase.HTMLAttributes<HTMLLidsPillElement>;
             "lids-searchbar": LocalJSX.LidsSearchbar & JSXBase.HTMLAttributes<HTMLLidsSearchbarElement>;
             "lids-select": LocalJSX.LidsSelect & JSXBase.HTMLAttributes<HTMLLidsSelectElement>;
             "lids-switch": LocalJSX.LidsSwitch & JSXBase.HTMLAttributes<HTMLLidsSwitchElement>;
